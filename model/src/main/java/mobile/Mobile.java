@@ -21,10 +21,6 @@ public class Mobile {
     	public void setY(int y) {
     		this.y = y;
     		}
-	
-	
-	this.setX(x);
-    this.setY(y);
     
 	/**
      * Move up.
@@ -55,5 +51,10 @@ public class Mobile {
     }
 	
 	
+    
+    
+    
+    
+    
 	
 }
