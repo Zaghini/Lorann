@@ -2,11 +2,12 @@ package model.Element;
 
 import java.awt.Image;
 
+import showboard.ISquare;
+
 
 
 /**
  * <h1>The Element Class.</h1>
- *
  * @author Jade
  * @version 0.4
  * @see ISquare
@@ -14,7 +15,7 @@ import java.awt.Image;
 public abstract class Element implements IElement {
 
     /** The sprite. */
-    private Sprite       sprite;
+    private Sprite    sprite;
 
     /** The permeability. */
     private Permeability permeability;

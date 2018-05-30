@@ -1,7 +1,9 @@
 package model.Element;
+
 import java.awt.Image;
 
 import showboard.ISquare;
+
 
 
 /**
@@ -35,3 +37,4 @@ public interface IElement extends ISquare {
     Image getImage();
 
 }
+
