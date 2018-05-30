@@ -31,6 +31,7 @@ public abstract class ExampleDAO extends AbstractDAO {
     /** The name column index. */
     private static int    nameColumnIndex  = 2;
 
+
     /**
      * Gets the example by id.
      *
