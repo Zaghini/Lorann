@@ -10,8 +10,7 @@ import java.util.List;
  * @version 1.0
  */
 public interface IModel {
-
-    /**
+	 /**
      * Gets the example by id.
      *
      * @param id
@@ -40,5 +39,6 @@ public interface IModel {
      * @throws SQLException
      *             the SQL exception
      */
-    List<Example> getAllExamples() throws SQLException;
+List<Example> getAllExamples() throws SQLException;
+   
 }
