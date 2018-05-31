@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.lang.model.element.Element;
+
 import model.Example;
 
 /**
@@ -17,13 +19,13 @@ import model.Example;
 public abstract class ExampleDAO extends AbstractDAO {
 
     /** The sql example by id. */
-    private static String sqlExampleById   = "{call findExampleById(?)}";
+    private static String sqlExampleById = "{call findExampleById(?)}";
 
     /** The sql example by name. */
     private static String sqlExampleByName = "{call findExampleByName(?)}";
 
     /** The sql all examples. */
-    private static String sqlAllExamples   = "{call findAllExamples()}";
+    private static String sqlAllExamples   = "SELECT * from example";
 
     /** The id column index. */
     private static int    idColumnIndex    = 1;
@@ -40,6 +42,8 @@ public abstract class ExampleDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
+    public Element map[][];
+    
     public static Example getExampleById(final int id) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExampleById);
         Example example = null;

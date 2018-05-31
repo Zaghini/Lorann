@@ -2,7 +2,6 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-
 import model.Example;
 import model.IModel;
 import view.IView;
@@ -13,13 +12,15 @@ import view.IView;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-public class ControllerFacade implements IController {
+public class ControllerFacade implements IController,IOrderPerformer {
 
     /** The view. */
-    private final IView  view;
+    private IView  view;
 
     /** The model. */
-    private final IModel model;
+    private IModel model;
+    /** The stack order. */
+    private UserOrder stackOrder;
 
     /**
      * Instantiates a new controller facade.
@@ -42,9 +43,9 @@ public class ControllerFacade implements IController {
      *             the SQL exception
      */
     public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getExampleById(1).toString());
+    	System.out.println(this.getModel().getExampleById(3).toString());
 
-        this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
+        this.getView().displayMessage(this.getModel().getExampleByName("X").toString());
 
         final List<Example> examples = this.getModel().getAllExamples();
         final StringBuilder message = new StringBuilder();
@@ -52,7 +53,7 @@ public class ControllerFacade implements IController {
             message.append(example);
             message.append('\n');
         }
-        this.getView().displayMessage(message.toString());
+        System.out.println(message.toString());
     }
 
     /**
@@ -60,6 +61,13 @@ public class ControllerFacade implements IController {
      *
      * @return the view
      */
+    public final void play() {
+    	
+    	
+    }
+    public final void orderPerform(final UserOrder userOrder) {
+        this.setStackOrder(userOrder);
+    }
     public IView getView() {
         return this.view;
     }
@@ -72,4 +80,27 @@ public class ControllerFacade implements IController {
     public IModel getModel() {
         return this.model;
     }
+
+	public void setView(IView view) {
+		this.view = view;
+	}
+
+	public void setModel(IModel model) {
+		this.model = model;
+	}
+
+	public UserOrder getStackOrder() {
+		return stackOrder;
+	}
+
+	public void setStackOrder(UserOrder stackOrder) {
+		this.stackOrder = stackOrder;
+	}
+	 /**
+     * Clear stack order.
+     */
+    private void clearStackOrder() {
+        this.stackOrder = UserOrder.NOP;
+    }
+
 }
