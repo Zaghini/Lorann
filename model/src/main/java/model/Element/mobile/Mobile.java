@@ -61,5 +61,9 @@ public abstract class Mobile extends Element {
         super(sprite, permeability);
     }
     
-	
+	    Mobile(final int x, final int y, final Sprite sprite, final Permeability permeability) {
+	        this(sprite, permeability);
+	        this.setX(x);
+	        this.setY(y);
+	}
 }

@@ -15,10 +15,10 @@ import showboard.ISquare;
 public abstract class Element implements IElement {
 
     /** The sprite. */
-    private Sprite    sprite;
+    protected Sprite    sprite;
 
     /** The permeability. */
-    private Permeability permeability;
+    protected Permeability permeability;
 
     /**
      * Instantiates a new element.
