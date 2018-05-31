@@ -18,7 +18,7 @@ public final class ModelFacade implements IModel{
 	
 private int height ;
 private int widht ;
-private Element[][] onTheMap;
+public Element[][] onTheMap;
 
 public int getHeight() {
 	return height;

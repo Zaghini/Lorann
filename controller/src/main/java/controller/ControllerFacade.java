@@ -62,7 +62,26 @@ public class ControllerFacade implements IController,IOrderPerformer {
      * @return the view
      */
     public final void play() {
-    	
+    	 while (this.getModel().getElement().isAlive()) {
+             Thread.sleep(speed);
+             switch (this.getStackOrder()) {
+                 case RIGHT:
+                     this.getModel().getElement().moveRight();
+                     break;
+                 case LEFT:
+                     this.getModel().getElement().moveLeft();
+                     break;
+                 case NOP:
+                 default:
+                     this.getModel().getElement().doNothing();
+                     break;
+             }
+             this.clearStackOrder();
+             if (this.getModel().getElement().isAlive()) {
+                 this.getModel().getElement().moveDown();
+             }
+         }
+         this.getView().displayMessage("CRASH !!!!!!!!!.");
     	
     }
     public final void orderPerform(final UserOrder userOrder) {

@@ -26,13 +26,15 @@ public abstract class ExampleDAO extends AbstractDAO {
 
     /** The sql all examples. */
     private static String sqlAllExamples   = "SELECT * from example";
+    /** The sql all Map. */
+    private static String sqlAllMap   = "SELECT * from example";
 
     /** The id column index. */
     private static int    idColumnIndex    = 1;
 
     /** The name column index. */
     private static int    nameColumnIndex  = 2;
-
+    
     /**
      * Gets the example by id.
      *
@@ -102,4 +104,18 @@ public abstract class ExampleDAO extends AbstractDAO {
         }
         return examples;
     }
+   /** public static List<Element> getAllMap() throws SQLException {
+    	final ArrayList<Element> elements = new ArrayList<Element>();
+    	final CallableStatement callStatement = prepareCall(sqlAllMap);
+        if (callStatement.execute()) {
+            final ResultSet result = callStatement.getResultSet();
+
+            for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
+                elements.add(new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex)result.getString(name2ColumnIndex)));
+            }
+            result.close();
+        }
+        return elements;
+    }
+    */
 }
