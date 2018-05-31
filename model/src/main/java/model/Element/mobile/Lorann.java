@@ -3,7 +3,7 @@ package model.Element.mobile;
 import model.Element.Permeability;
 import model.Element.Sprite;
 
-public class Lorann extends Mobile {
+public class Lorann extends Personnage {
 
 	private static Sprite Lorann1 = new Sprite('A',"Lorann1.png");
 	private static Sprite Lorann2 = new Sprite('Z',"Lorann2.png"); 
@@ -17,11 +17,11 @@ public class Lorann extends Mobile {
 	
 	protected Lorann(){
 			
-			super(Lorann, Permeability.PENETRABLE);
+			super(Lorann4, Permeability.PENETRABLE);
 		}
 		
 		public Boolean isAlive() {
-	        return this.alive;
+	     return this.alive;
 	    }
 		
 		public void die() {

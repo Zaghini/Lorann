@@ -4,13 +4,21 @@ import model.Element.Element;
 import model.Element.Permeability;
 import model.Element.Sprite;
 
-public class Personnage {
+public abstract class Personnage extends Mobile {
 
-	    /** The alive. */
-	    private Boolean alive = true;
+	    Personnage(int x, int y, Sprite sprite, Permeability permeability) {
+		super(x, y, sprite, permeability);
+		// TODO Auto-generated constructor stub
+	}
+	    Personnage(final Sprite sprite, final Permeability permeability) {
+	        super(sprite, permeability);
+	    }
+
+		/** The alive. */
+	    protected Boolean alive = true;
 
 	    /** The road. */
-	    private Map map;
+	    
 
 	    /**
 	     * Checks if is alive.
@@ -25,14 +33,7 @@ public class Personnage {
 	        this.alive = false;
 	    }
 
-	    public Map getMap() {
-	        return this.map;
-	    }
-	    
-	    public void setMap(final Map map) {
-	        this.map = map;
-	    }
 }
-}
+
 
 

@@ -12,14 +12,15 @@ public class Spell extends Mobile {
 	private static Sprite Spell4 = new Sprite('8',"Spell4.png"); 
 	private static Sprite Spell5 = new Sprite('9',"Spell5.png"); 
 
+	protected Boolean alive = true;
 	
 	protected Spell() {
 		
-		super(Spell, Permeability.PENETRABLE);
+		super(Spell1, Permeability.PENETRABLE);
 	}
 	
 	public Boolean isAlive() {
-        return this.alive;
+        return this.alive=true;
     }
 	
 	public void die() {
@@ -31,5 +32,9 @@ public class Spell extends Mobile {
 		this.setX(x);
 		this.setY(y);
 	}
+	
 
+		
+	
+	
 }	

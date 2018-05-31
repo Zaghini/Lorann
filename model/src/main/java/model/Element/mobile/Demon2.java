@@ -28,8 +28,5 @@ public class Demon2 extends Mobile {
 			this.setY(y);
 		}
 
-		
-			// TODO Auto-generated constructor stub
-		}
-	
 }
+	
