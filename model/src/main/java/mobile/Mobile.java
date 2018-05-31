@@ -1,6 +1,12 @@
-package mobile;
+package model.Element.mobile;
 
-public class Mobile {
+import model.Element.Element;
+import model.Element.Permeability;
+import model.Element.Sprite;
+
+
+
+public abstract class Mobile extends Element {
 	
 	public int x;
 	public int y;
@@ -49,12 +55,11 @@ public class Mobile {
     public void moveRight() {
         this.setX(this.getX() + 1);
     }
-	
-	
+
     
-    
-    
-    
+	   Mobile(final Sprite sprite, final Permeability permeability) {
+        super(sprite, permeability);
+    }
     
 	
 }
