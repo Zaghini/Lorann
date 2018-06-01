@@ -1,22 +1,12 @@
 package view;
 
-public abstract class Main extends ViewFrame{
+public abstract class Main {
 	
-	public Main(int width, int length, int[][] motionMapDimension, String[] motionMapImages, String[][] motionlessMap,
-			int score, int life) {
-		super(width, length, motionMapDimension, motionMapImages, motionlessMap, score, life);
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -5276643838848973371L;
-
+	int x = 20;
+	int y = 12;
+	
 	public static void main(String[] args) {
 		
-		ViewFrame fenetre = new ViewFrame(20, 10, null, args, null, 40, 50);
-		
-		
+		ViewFrame fenetre = new ViewFrame();
 	}
 }
