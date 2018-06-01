@@ -7,7 +7,7 @@ public class Bulle extends Immobile {
 	
 	private static Sprite Bulle = new Sprite('O',"crystal_ball.png");
 	
-	Bulle(){
+	protected Bulle(){
 		super(Bulle,Permeability.PENETRABLE);
 	}
 

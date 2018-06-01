@@ -7,7 +7,7 @@ public class Porte_Ouverte extends Immobile {
 	
  private static Sprite Porte_Ouverte = new Sprite('P',"gate_open.png");
  
- 	Porte_Ouverte(){
+ 	protected Porte_Ouverte(){
  	super(Porte_Ouverte,Permeability.PENETRABLE);
  	}
 }

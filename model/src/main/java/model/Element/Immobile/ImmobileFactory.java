@@ -10,7 +10,7 @@ public abstract class ImmobileFactory {
 	private static final Bourse Bourse = new Bourse();
 	private static final Porte_Ouverte Porte_Ouverte = new Porte_Ouverte();
 	
-	 private static Immobile[]   ImmobileElement  = {
+	 private  Immobile[]  ImmobileElement  = {
 		        Mur_Horizontal,
 		        Mur_Vertical,
 		        OS,

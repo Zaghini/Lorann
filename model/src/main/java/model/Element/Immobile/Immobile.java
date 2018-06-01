@@ -6,7 +6,7 @@ import model.Element.Sprite;
 
 public abstract class Immobile extends Element {
 	 
-	Immobile(final Sprite sprite, final Permeability permeability) {
+	protected Immobile(final Sprite sprite, final Permeability permeability) {
 	        super(sprite, permeability);
 	    }
 

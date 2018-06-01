@@ -6,7 +6,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class ImmobileTest {
+public class ImmobileTest extends ElementTest{
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
