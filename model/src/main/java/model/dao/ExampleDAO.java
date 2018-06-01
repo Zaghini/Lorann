@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.lang.model.element.Element;
+
 import model.Example;
 
 /**
@@ -17,20 +19,27 @@ import model.Example;
 public abstract class ExampleDAO extends AbstractDAO {
 
     /** The sql example by id. */
-    private static String sqlExampleById   = "{call findExampleById(?)}";
+    private static String sqlExampleById = "{call findExampleById(?)}";
 
     /** The sql example by name. */
     private static String sqlExampleByName = "{call findExampleByName(?)}";
 
     /** The sql all examples. */
-    private static String sqlAllExamples   = "{call findAllExamples()}";
+    private static String sqlAllExamples   = "SELECT * from example";
+    /** The sql all Map. */
+    private static String sqlAllMap   = "SELECT * from example";
 
     /** The id column index. */
     private static int    idColumnIndex    = 1;
 
     /** The name column index. */
     private static int    nameColumnIndex  = 2;
+<<<<<<< HEAD
+    
+=======
 
+
+>>>>>>> origin/Zaghinino
     /**
      * Gets the example by id.
      *
@@ -40,6 +49,8 @@ public abstract class ExampleDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception
      */
+    public Element map[][];
+    
     public static Example getExampleById(final int id) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExampleById);
         Example example = null;
@@ -98,4 +109,18 @@ public abstract class ExampleDAO extends AbstractDAO {
         }
         return examples;
     }
+   /** public static List<Element> getAllMap() throws SQLException {
+    	final ArrayList<Element> elements = new ArrayList<Element>();
+    	final CallableStatement callStatement = prepareCall(sqlAllMap);
+        if (callStatement.execute()) {
+            final ResultSet result = callStatement.getResultSet();
+
+            for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
+                elements.add(new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex)result.getString(name2ColumnIndex)));
+            }
+            result.close();
+        }
+        return elements;
+    }
+    */
 }
