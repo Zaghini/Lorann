@@ -7,7 +7,7 @@ public class Mur_Horizontal extends Immobile{
 	
 	private static final Sprite Mur_Horizontal = new Sprite ('I',"Horizontal_bone.png");
 	
-	Mur_Horizontal(){
+	protected Mur_Horizontal(){
 		super(Mur_Horizontal,Permeability.BLOCKING);
 	}
 	

@@ -7,7 +7,7 @@ public class Mur_Vertical extends Immobile {
 	
 	private static final Sprite Mur_Vertical = new Sprite('-',"vertical_bone.png");
 	
-	Mur_Vertical(){
+	protected Mur_Vertical(){
 		super(Mur_Vertical,Permeability.BLOCKING);
 	}
 	

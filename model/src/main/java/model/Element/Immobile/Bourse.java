@@ -7,7 +7,7 @@ public class Bourse extends Immobile {
 	
 	private static Sprite Bourse = new Sprite('B',"purse.png");
 	
-	Bourse(){
+	protected Bourse(){
 	super(Bourse,Permeability.PENETRABLE);	
 	}
 

@@ -10,7 +10,11 @@ public abstract class ImmobileFactory {
 	private static final Bourse Bourse = new Bourse();
 	private static final Porte_Ouverte Porte_Ouverte = new Porte_Ouverte();
 	
+<<<<<<< HEAD
 	 private static Immobile[]  ImmobileElement  = {
+=======
+	 private  Immobile[]  ImmobileElement  = {
+>>>>>>> Blondino
 		        Mur_Horizontal,
 		        Mur_Vertical,
 		        OS,

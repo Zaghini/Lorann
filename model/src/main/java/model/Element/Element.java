@@ -15,7 +15,11 @@ import showboard.ISquare;
 public abstract class Element implements IElement {
 
     /** The sprite. */
+<<<<<<< HEAD
     protected Sprite    sprite;
+=======
+    private Sprite   sprite;
+>>>>>>> Blondino
 
     /** The permeability. */
     protected Permeability permeability;
