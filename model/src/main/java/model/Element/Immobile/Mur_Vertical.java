@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package model.Element.Immobile;
 
 import model.Element.Permeability;
@@ -15,21 +15,3 @@ public class Mur_Vertical extends Immobile {
 	
 
 }
-=======
-package model.Element.Immobile;
-
-import model.Element.Permeability;
-import model.Element.Sprite;
-
-public class Mur_Vertical extends Immobile {
-	
-	private static final Sprite Mur_Vertical = new Sprite('-',"vertical_bone.png");
-	
-	Mur_Vertical(){
-		super(Mur_Vertical,Permeability.BLOCKING);
-	}
-	
-	
-
-}
->>>>>>> origin/Petrinio
