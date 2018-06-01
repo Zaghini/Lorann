@@ -7,6 +7,5 @@ public abstract class Main {
 	
 	public static void main(String[] args) {
 		
-		ViewFrame fenetre = new ViewFrame();
 	}
 }

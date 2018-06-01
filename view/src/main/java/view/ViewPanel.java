@@ -60,14 +60,16 @@ public class ViewPanel extends JPanel{
 	//Load motionlessMap 
 		for (int i = 0; i < this.mapLength; i++) { 
 			for (int j = 0; j < this.mapWidth; j++) { 
-				icoBandeFond = (new ImageIcon(getClass().getResource("/image/bone.png"))); 
-				setImgBandeFond(this.icoBandeFond.getImage());
+				this.icoBandeFond = new ImageIcon(getClass().getResource("/image/lorann_b.png"));
+				this.imgBandeFond = this.icoBandeFond.getImage();
+				//img = ImageIO.read(new File(this.motionlessMap[i][j])); 
 				g.drawImage(img, j*32, i*32, this); } }
 	//Load motionMap 
 		for (int i = 0; i < 5; i++) { 
 			if (motionMapDimension[i][0] != -1) { 
-				icoBandeFond = (new ImageIcon(getClass().getResource("/image/bone.png"))); 
-				setImgBandeFond(this.icoBandeFond.getImage()); 
+				this.icoBandeFond = new ImageIcon(getClass().getResource("/image/lorann_b.png"));
+				this.imgBandeFond = this.icoBandeFond.getImage();
+				//img = ImageIO.read(new File(this.motionMapImages[i])); 
 				g.drawImage(img, this.motionMapDimension[i][0], this.motionMapDimension[i][1], this); } 
 			else { 
 	} 
@@ -130,13 +132,5 @@ public class ViewPanel extends JPanel{
 
 	public void setWidth(int width) {
 		this.width = width;
-	}
-
-	public Image getImgBandeFond() {
-		return imgBandeFond;
-	}
-
-	public void setImgBandeFond(Image imgBandeFond) {
-		this.imgBandeFond = imgBandeFond;
 	} 
 	  }       
