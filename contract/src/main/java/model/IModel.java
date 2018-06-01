@@ -3,6 +3,8 @@ package model;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.lang.model.element.Element;
+
 /**
  * <h1>The Interface IModel.</h1>
  *
@@ -10,8 +12,7 @@ import java.util.List;
  * @version 1.0
  */
 public interface IModel {
-
-    /**
+	 /**
      * Gets the example by id.
      *
      * @param id
@@ -40,5 +41,13 @@ public interface IModel {
      * @throws SQLException
      *             the SQL exception
      */
-    List<Example> getAllExamples() throws SQLException;
+List<Example> getAllExamples() throws SQLException;
+   
+public int getHeight() ;
+public void setHeight(int height);
+public int getWidht();
+public void setWidht(int widht);
+public Element getOnTheMap(int x,int y);
+public void setOnTheMap(Element element, int x, int y);
+public Element getElement();
 }
