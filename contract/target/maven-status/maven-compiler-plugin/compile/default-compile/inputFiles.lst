@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\jojo\Documents\GitHub\Lorann\contract\src\main\java\model\Example.java
 C:\Users\jojo\Documents\GitHub\Lorann\contract\src\main\java\controller\package-info.java
 C:\Users\jojo\Documents\GitHub\Lorann\contract\src\main\java\view\IView.java
@@ -15,3 +16,12 @@ C:\Users\petri\git\Lorann\contract\src\main\java\model\Example.java
 C:\Users\petri\git\Lorann\contract\src\main\java\view\IView.java
 C:\Users\petri\git\Lorann\contract\src\main\java\view\package-info.java
 >>>>>>> origin/Petrinio
+=======
+C:\Users\user\git\Lorann\contract\src\main\java\model\package-info.java
+C:\Users\user\git\Lorann\contract\src\main\java\controller\package-info.java
+C:\Users\user\git\Lorann\contract\src\main\java\view\package-info.java
+C:\Users\user\git\Lorann\contract\src\main\java\model\Example.java
+C:\Users\user\git\Lorann\contract\src\main\java\controller\IController.java
+C:\Users\user\git\Lorann\contract\src\main\java\model\IModel.java
+C:\Users\user\git\Lorann\contract\src\main\java\view\IView.java
+>>>>>>> origin/Zaghinino

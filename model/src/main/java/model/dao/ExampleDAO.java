@@ -34,7 +34,12 @@ public abstract class ExampleDAO extends AbstractDAO {
 
     /** The name column index. */
     private static int    nameColumnIndex  = 2;
+<<<<<<< HEAD
     
+=======
+
+
+>>>>>>> origin/Zaghinino
     /**
      * Gets the example by id.
      *
