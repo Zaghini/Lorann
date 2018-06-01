@@ -21,7 +21,7 @@ public class ControllerFacade implements IController,IOrderPerformer {
     private IModel model;
     /** The stack order. */
     private UserOrder stackOrder;
-
+    private static int     speed = 100;
     /**
      * Instantiates a new controller facade.
      *
@@ -63,13 +63,19 @@ public class ControllerFacade implements IController,IOrderPerformer {
      */
     public final void play() {
     	 while (this.getModel().getElement().isAlive()) {
-             Thread.sleep(speed);
+			Thread.sleep(speed);
              switch (this.getStackOrder()) {
                  case RIGHT:
-                     this.getModel().getElement().moveRight();
+                     this.getModel().getElement().
                      break;
                  case LEFT:
                      this.getModel().getElement().moveLeft();
+                     break;
+                 case UP:
+                     this.getModel().getElement().moveUp();
+                     break;
+                 case DOWN:
+                     this.getModel().getElement().moveDown();
                      break;
                  case NOP:
                  default:

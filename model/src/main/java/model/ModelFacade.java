@@ -14,12 +14,12 @@ import model.dao.ExampleDAO;
  * @version 1.0
  */
 
-public final class ModelFacade implements IModel{
+public abstract class ModelFacade implements IModel{
 	
 private int height ;
 private int widht ;
 public Element[][] onTheMap;
-
+private Element element;
 public int getHeight() {
 	return height;
 }
@@ -41,7 +41,9 @@ public void setOnTheMap(Element element, int x, int y) {
 public ModelFacade() {
     super();
 }
-
+public Element getElement() {
+	return element;
+}
 /*
  * (non-Javadoc)
  * @see model.IModel#getExampleById(int)
